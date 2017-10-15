@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20171014233600) do
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"
-    t.string "credit"
+    t.integer "credit", default: 100
     t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
