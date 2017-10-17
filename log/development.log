@@ -260,3 +260,277 @@ Completed 200 OK in 34ms (Views: 32.0ms | ActiveRecord: 0.4ms)
 
   [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2017-10-14 20:06:34 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 45ms (Views: 36.9ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 16:54:47 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (19.1ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 2.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+     5: <div class="container">
+     6:   <% if current_user %>
+     7:     <% @users.each do |d| %>
+     8:       <p><%= @user.name %> </p>
+     9:     <% end %>
+    10:   <% end %>
+    11: </div>
+  
+app/views/users/index.html.erb:8:in `block in _app_views_users_index_html_erb___1414335149056201475_70237159479940'
+app/views/users/index.html.erb:7:in `_app_views_users_index_html_erb___1414335149056201475_70237159479940'
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2017-10-16 16:55:28 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (22.3ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 7.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+     5: <div class="container">
+     6:   <% if current_user %>
+     7:     <% @users.each do |d| %>
+     8:       <p><%= @user.name %> </p>
+     9:     <% end %>
+    10:   <% end %>
+    11: </div>
+  
+app/views/users/index.html.erb:8:in `block in _app_views_users_index_html_erb___1414335149056201475_70237123885540'
+app/views/users/index.html.erb:7:in `_app_views_users_index_html_erb___1414335149056201475_70237123885540'
+Started GET "/" for 127.0.0.1 at 2017-10-16 16:55:56 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 58ms (Views: 50.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 16:56:42 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 35ms (Views: 32.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 16:58:20 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 38ms (Views: 34.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 17:00:13 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/noahwimmer/dev/mobius/app/views/users/index.html.erb:9: syntax error, unexpected tSTRING_BEG, expecting ')'
+on_to "Send Credits", :class "btn");@output_buffer.safe_appe
+                              ^):
+  
+app/views/users/index.html.erb:9: syntax error, unexpected tSTRING_BEG, expecting ')'
+Started GET "/" for 127.0.0.1 at 2017-10-16 17:00:46 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 27ms (Views: 25.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 17:01:44 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 29ms (Views: 26.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 17:01:46 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 26ms (Views: 23.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 17:03:37 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/noahwimmer/dev/mobius/app/views/users/index.html.erb:14: syntax error, unexpected '<'
+        </div>
+         ^
+/Users/noahwimmer/dev/mobius/app/views/users/index.html.erb:16: unknown regexp options - dv
+/Users/noahwimmer/dev/mobius/app/views/users/index.html.erb:17: syntax error, unexpected '<'
+      </div>
+       ^
+/Users/noahwimmer/dev/mobius/app/views/users/index.html.erb:20: unknown regexp options - dv
+/Users/noahwimmer/dev/mobius/app/views/users/index.html.erb:20: unmatched close parenthesis: /div>
+    <% end );@output_buffer.safe_append='
+'.freeze;   end 
+@output_buffer.safe_append='</i
+/Users/noahwimmer/dev/mobius/app/views/users/index.html.erb:20: unterminated string meets end of file
+/Users/noahwimmer/dev/mobius/app/views/users/index.html.erb:20: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/users/index.html.erb:14: syntax error, unexpected '<'
+app/views/users/index.html.erb:16: unknown regexp options - dv
+app/views/users/index.html.erb:17: syntax error, unexpected '<'
+app/views/users/index.html.erb:20: unknown regexp options - dv
+app/views/users/index.html.erb:20: unmatched close parenthesis: /div>
+app/views/users/index.html.erb:20: unterminated string meets end of file
+app/views/users/index.html.erb:20: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/" for 127.0.0.1 at 2017-10-16 17:03:57 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/noahwimmer/dev/mobius/app/views/users/index.html.erb:14: syntax error, unexpected '<'
+        </div>
+         ^
+/Users/noahwimmer/dev/mobius/app/views/users/index.html.erb:16: unknown regexp options - dv
+/Users/noahwimmer/dev/mobius/app/views/users/index.html.erb:17: syntax error, unexpected '<'
+      </div>
+       ^
+/Users/noahwimmer/dev/mobius/app/views/users/index.html.erb:20: unknown regexp options - dv
+/Users/noahwimmer/dev/mobius/app/views/users/index.html.erb:20: unmatched close parenthesis: /div>
+    <% end );@output_buffer.safe_append='
+'.freeze;   end 
+@output_buffer.safe_append='</i
+/Users/noahwimmer/dev/mobius/app/views/users/index.html.erb:20: unterminated string meets end of file
+/Users/noahwimmer/dev/mobius/app/views/users/index.html.erb:20: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/users/index.html.erb:14: syntax error, unexpected '<'
+app/views/users/index.html.erb:16: unknown regexp options - dv
+app/views/users/index.html.erb:17: syntax error, unexpected '<'
+app/views/users/index.html.erb:20: unknown regexp options - dv
+app/views/users/index.html.erb:20: unmatched close parenthesis: /div>
+app/views/users/index.html.erb:20: unterminated string meets end of file
+app/views/users/index.html.erb:20: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/" for 127.0.0.1 at 2017-10-16 17:04:09 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/noahwimmer/dev/mobius/app/views/users/index.html.erb:14: syntax error, unexpected '<'
+        </div>
+         ^
+/Users/noahwimmer/dev/mobius/app/views/users/index.html.erb:16: unknown regexp options - dv
+/Users/noahwimmer/dev/mobius/app/views/users/index.html.erb:17: syntax error, unexpected '<'
+      </div>
+       ^
+/Users/noahwimmer/dev/mobius/app/views/users/index.html.erb:20: unknown regexp options - dv
+/Users/noahwimmer/dev/mobius/app/views/users/index.html.erb:20: unmatched close parenthesis: /div>
+    <% end );@output_buffer.safe_append='
+'.freeze;   end 
+@output_buffer.safe_append='</i
+/Users/noahwimmer/dev/mobius/app/views/users/index.html.erb:20: unterminated string meets end of file
+/Users/noahwimmer/dev/mobius/app/views/users/index.html.erb:20: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/users/index.html.erb:14: syntax error, unexpected '<'
+app/views/users/index.html.erb:16: unknown regexp options - dv
+app/views/users/index.html.erb:17: syntax error, unexpected '<'
+app/views/users/index.html.erb:20: unknown regexp options - dv
+app/views/users/index.html.erb:20: unmatched close parenthesis: /div>
+app/views/users/index.html.erb:20: unterminated string meets end of file
+app/views/users/index.html.erb:20: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/" for 127.0.0.1 at 2017-10-16 17:04:26 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 31ms (Views: 28.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 17:05:01 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (4.9ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 2..3)):
+    13:           <%= button_to "Send Credits"%>
+    14:         </div>
+    15:         <div class="col-md-4">
+    16:           <%= text_field %>
+    17:         </div>
+    18:       </div>
+    19:     <% end %>
+  
+app/views/users/index.html.erb:16:in `block in _app_views_users_index_html_erb___1414335149056201475_70237146075440'
+app/views/users/index.html.erb:7:in `_app_views_users_index_html_erb___1414335149056201475_70237146075440'
+Started GET "/" for 127.0.0.1 at 2017-10-16 17:07:38 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 27ms (Views: 25.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 17:07:51 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 35ms (Views: 32.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 17:08:23 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 40ms (Views: 36.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 17:08:44 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 38ms (Views: 34.7ms | ActiveRecord: 0.5ms)
+
+
