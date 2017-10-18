@@ -11,10 +11,6 @@ class User < ApplicationRecord
     current_user == @user  
   end
 
-  def set_credit_default
-    
-  end
-
   validates :name, presence: true
   validates :email, presence: true
   validates_uniqueness_of :email
