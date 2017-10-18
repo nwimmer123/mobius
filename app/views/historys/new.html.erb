@@ -1,0 +1,23 @@
+<div class="page">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+
+      <%= form_for :history, url: historys_path do |f| %>
+        <fieldset>
+          <h1 class="text-center">Get your first 100 credits!</h1>
+
+          <%= f.hidden_field :credit, value: 100, class: "form-control" %><br>
+
+          <div class="form-group">
+            <div class="col-md-12">
+              <%= f.submit "Sign up", class: "btn btn-success" %>
+            </div>
+          </div>
+          
+        </fieldset>
+      <% end %>
+
+    </div>
+  </div>
+</div>
+

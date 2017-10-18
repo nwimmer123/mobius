@@ -14,7 +14,7 @@ class UsersController < ApplicationController
     user = User.new(user_params)
     if user.save
       login(user)
-      redirect_to root_path
+      redirect_to new_history_path
     else
       flash[:error] = "Email has already been taken"
       redirect_to new_user_path
@@ -29,7 +29,7 @@ class UsersController < ApplicationController
   end
 
   def update
-    current_params = params.require(:user).permit(:name, :password, :email, :credit)
+    current_params = params.require(:user).permit(:name, :password, :email)
     @user.update_attributes(current_params)
     redirect_to user_path
   end
@@ -43,7 +43,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :password, :credit)
+    params.require(:user).permit(:name, :email, :password)
   end
 
 end
