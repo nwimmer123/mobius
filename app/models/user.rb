@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   has_secure_password
+  has_many :historys
 
   def self.confirm(params)
 		@user = User.find_by({email: params[:email]})
@@ -8,6 +9,10 @@ class User < ApplicationRecord
   
   def is_authorized?
     current_user == @user  
+  end
+
+  def set_credit_default
+    
   end
 
   validates :name, presence: true
